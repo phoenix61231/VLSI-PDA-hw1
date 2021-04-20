@@ -1,0 +1,540 @@
+Loading db file '/theda21_2/CBDK_IC_Contest/CBDK_IC_Contest_v2.1/SynopsysDC/db/slow.db'
+Loading db file '/theda21_2/CBDK_IC_Contest/CBDK_IC_Contest_v2.1/SynopsysDC/db/fast.db'
+Loading db file '/usr/cad/synopsys/icc/cur/libraries/syn/gtech.db'
+Information: linking reference library : /theda21_2/CBDK_IC_Contest/CBDK_IC_Contest_v2.1/Astro/tsmc13gfsg_fram. (PSYN-878)
+Information: Loading local_link_library attribute {slow.db, fast.db}. (MWDC-290)
+Warning: Can't read link_library file 'dw01.sldb'. (UID-3)
+Warning: Can't read link_library file 'dw02.sldb'. (UID-3)
+Warning: Can't read link_library file 'dw03.sldb'. (UID-3)
+Warning: Can't read link_library file 'dw04.sldb'. (UID-3)
+Warning: Can't read link_library file 'dw05.sldb'. (UID-3)
+Warning: Can't read link_library file 'dw06.sldb'. (UID-3)
+
+  Linking design 'GSIM'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (89 designs)              GSIM.CEL, etc
+  slow (library)              /theda21_2/CBDK_IC_Contest/CBDK_IC_Contest_v2.1/SynopsysDC/db/slow.db
+  fast (library)              /theda21_2/CBDK_IC_Contest/CBDK_IC_Contest_v2.1/SynopsysDC/db/fast.db
+  dw_foundation.sldb (library) /usr/cad/synopsys/icc/cur/libraries/syn/dw_foundation.sldb
+
+Information: The design has horizontal rows, and Y-symmetry has been used for sites. (MWDC-217)
+Floorplan loading succeeded.
+Warning: Can't read link_library file 'dw01.sldb'. (UID-3)
+Warning: Can't read link_library file 'dw02.sldb'. (UID-3)
+Warning: Can't read link_library file 'dw03.sldb'. (UID-3)
+Warning: Can't read link_library file 'dw04.sldb'. (UID-3)
+Warning: Can't read link_library file 'dw05.sldb'. (UID-3)
+Warning: Can't read link_library file 'dw06.sldb'. (UID-3)
+
+  Loading design 'GSIM'
+
+
+
+
+Information: Library Manufacturing Grid(GridResolution) : 5
+Information: Time Unit from Milkyway design library: 'ns' 
+Information: Design Library and main library timing units are matched - 1.000 ns. 
+Information: Resistance Unit from Milkyway design library: 'kohm' 
+Information: Design Library and main library resistance units are matched - 1.000 kohm. 
+Information: Capacitance Unit from Milkyway design library: 'pf' 
+Information: Design Library and main library capacitance units are matched - 1.000 pf. 
+Warning: Inconsistent library data found for layer POLY1. (RCEX-018)
+
+TLU+ File = /users/course/2020F/vlsi2000000/g109062542/HW1/tluplus/t013s8mg_fsg_typical.tluplus
+
+--------- Sanity Check on TLUPlus Files -------------
+1. Checking the conducting layer names in ITF and mapping file ... 
+[ Passed! ]
+2. Checking the via layer names in ITF and mapping file ... 
+[ Passed! ]
+3. Checking the consistency of Min Width and Min Spacing between MW-tech and ITF ... 
+[ Passed! ]
+----------------- Check Ends ------------------
+Information: The distance unit in Capacitance and Resistance is 1 micron. (RCEX-007)
+Information: The RC model used is detail route TLU+. (RCEX-015)
+Information: Start mixed mode parasitic extraction. (RCEX-023)
+Information: Start rc extraction...
+Information: Parasitic source is LPE. (RCEX-040)
+Information: Parasitic mode is RealRC. (RCEX-041)
+Information: Using virtual shield extraction. (RCEX-081)
+Information: Extraction mode is MIN_MAX. (RCEX-042)
+Information: Extraction derate is -40/25/125. (RCEX-043)
+Information: Coupling capacitances are lumped to ground. (RCEX-044)
+Information: Start back annotation for parasitic extraction. (RCEX-023)
+Information: End back annotation for parasitic extraction. (RCEX-023)
+Information: Start timing update for parasitic extraction. (RCEX-023)
+Information: End timing update for parasitic extraction. (RCEX-023)
+Information: End parasitic extraction. (RCEX-023)
+Information: Updating graph... (UID-83)
+Information: Updating design information... (UID-85)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : GSIM
+Version: K-2015.06-SP1
+Date   : Wed Oct  7 23:35:53 2020
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+Operating Conditions: slow   Library: slow
+
+Information: Percent of Arnoldi-based delays = 14.52%
+
+  Startpoint: xCount_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: xArray_reg[12][60]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.34       0.34
+  xCount_reg[3]/CK (DFFRX1)                               0.00       0.34 r
+  xCount_reg[3]/Q (DFFRX1)                                0.56       0.91 f
+  U56/Y (CLKBUFX8)                                        0.64 @     1.55 f
+  U8713/Y (NAND2X4)                                       0.72 @     2.27 r
+  U191/Y (CLKBUFX3)                                       0.53 @     2.80 r
+  U8545/Y (AOI2BB2XL)                                     0.23 &     3.03 r
+  U13564/Y (OAI221XL)                                     0.27 &     3.30 f
+  U10777/Y (OA22X1)                                       0.46 &     3.75 f
+  U10776/Y (NAND3X1)                                      0.67 &     4.42 r
+  U411/Y (INVX1)                                          0.31 &     4.72 f
+  mult_194_2/b[1] (GSIM_DW_mult_tc_19)                    0.00       4.72 f
+  mult_194_2/U61/CO (ADDFXL)                              0.72 &     5.44 f
+  mult_194_2/U60/CO (ADDFXL)                              0.42 &     5.86 f
+  mult_194_2/U59/CO (ADDFXL)                              0.43 &     6.29 f
+  mult_194_2/U58/CO (ADDFXL)                              0.46 &     6.75 f
+  mult_194_2/U57/CO (ADDFXL)                              0.45 &     7.20 f
+  mult_194_2/U56/CO (ADDFXL)                              0.45 &     7.66 f
+  mult_194_2/U55/CO (ADDFXL)                              0.50 &     8.16 f
+  mult_194_2/U54/CO (ADDFXL)                              0.47 &     8.63 f
+  mult_194_2/U53/CO (ADDFXL)                              0.45 &     9.08 f
+  mult_194_2/U52/CO (ADDFXL)                              0.47 &     9.55 f
+  mult_194_2/U51/CO (ADDFXL)                              0.45 &     9.99 f
+  mult_194_2/U50/CO (ADDFXL)                              0.49 &    10.48 f
+  mult_194_2/U49/CO (ADDFXL)                              0.49 &    10.97 f
+  mult_194_2/U48/CO (ADDFXL)                              0.47 &    11.45 f
+  mult_194_2/U47/CO (ADDFXL)                              0.48 &    11.93 f
+  mult_194_2/U46/S (ADDFXL)                               0.40 &    12.33 r
+  mult_194_2/product[19] (GSIM_DW_mult_tc_19)             0.00      12.33 r
+  add_5_root_add_0_root_add_194_9/B[19] (GSIM_DW01_add_501)
+                                                          0.00      12.33 r
+  add_5_root_add_0_root_add_194_9/U1_19/CO (ADDFXL)       0.73 &    13.07 r
+  add_5_root_add_0_root_add_194_9/U1_20/S (ADDFXL)        0.45 &    13.52 r
+  add_5_root_add_0_root_add_194_9/SUM[20] (GSIM_DW01_add_501)
+                                                          0.00      13.52 r
+  add_4_root_add_0_root_add_194_9/B[20] (GSIM_DW01_add_500)
+                                                          0.00      13.52 r
+  add_4_root_add_0_root_add_194_9/U1_20/CO (ADDFXL)       0.82 &    14.33 r
+  add_4_root_add_0_root_add_194_9/U1_21/S (ADDFXL)        0.60 &    14.94 r
+  add_4_root_add_0_root_add_194_9/SUM[21] (GSIM_DW01_add_500)
+                                                          0.00      14.94 r
+  add_3_root_add_0_root_add_194_9/A[21] (GSIM_DW01_add_499)
+                                                          0.00      14.94 r
+  add_3_root_add_0_root_add_194_9/U1_21/CO (ADDFXL)       0.74 &    15.67 r
+  add_3_root_add_0_root_add_194_9/U1_22/S (ADDFXL)        0.59 &    16.26 r
+  add_3_root_add_0_root_add_194_9/SUM[22] (GSIM_DW01_add_499)
+                                                          0.00      16.26 r
+  add_2_root_add_0_root_add_194_9/B[22] (GSIM_DW01_add_498)
+                                                          0.00      16.26 r
+  add_2_root_add_0_root_add_194_9/U1_22/CO (ADDFXL)       0.80 &    17.06 r
+  add_2_root_add_0_root_add_194_9/U1_23/CO (ADDFXL)       0.44 &    17.51 r
+  add_2_root_add_0_root_add_194_9/U1_24/S (ADDFXL)        0.53 &    18.03 r
+  add_2_root_add_0_root_add_194_9/SUM[24] (GSIM_DW01_add_498)
+                                                          0.00      18.03 r
+  add_1_root_add_0_root_add_194_9/A[24] (GSIM_DW01_add_497)
+                                                          0.00      18.03 r
+  add_1_root_add_0_root_add_194_9/U1_24/S (ADDFXL)        0.61 &    18.64 f
+  add_1_root_add_0_root_add_194_9/SUM[24] (GSIM_DW01_add_497)
+                                                          0.00      18.64 f
+  add_0_root_add_0_root_add_194_9/B[24] (GSIM_DW01_add_496)
+                                                          0.00      18.64 f
+  add_0_root_add_0_root_add_194_9/U1_24/CO (ADDFXL)       0.73 &    19.38 f
+  add_0_root_add_0_root_add_194_9/U1_25/CO (ADDFXL)       0.54 &    19.92 f
+  add_0_root_add_0_root_add_194_9/U1_26/CO (ADDFXL)       0.49 &    20.40 f
+  add_0_root_add_0_root_add_194_9/U1_27/CO (ADDFXL)       0.52 &    20.92 f
+  add_0_root_add_0_root_add_194_9/U1_28/CO (ADDFXL)       0.45 &    21.38 f
+  add_0_root_add_0_root_add_194_9/U1_29/CO (ADDFXL)       0.46 &    21.84 f
+  add_0_root_add_0_root_add_194_9/U1_30/CO (ADDFXL)       0.45 &    22.29 f
+  add_0_root_add_0_root_add_194_9/U1_31/CO (ADDFXL)       0.46 &    22.75 f
+  add_0_root_add_0_root_add_194_9/U1_32/CO (ADDFXL)       0.44 &    23.19 f
+  add_0_root_add_0_root_add_194_9/U1_33/CO (ADDFXL)       0.45 &    23.64 f
+  add_0_root_add_0_root_add_194_9/U1_34/CO (ADDFXL)       0.45 &    24.09 f
+  add_0_root_add_0_root_add_194_9/U1_35/CO (ADDFXL)       0.47 &    24.56 f
+  add_0_root_add_0_root_add_194_9/U1_36/CO (ADDFXL)       0.46 &    25.02 f
+  add_0_root_add_0_root_add_194_9/U1_37/CO (ADDFXL)       0.46 &    25.48 f
+  add_0_root_add_0_root_add_194_9/U1_38/CO (ADDFXL)       0.49 &    25.97 f
+  add_0_root_add_0_root_add_194_9/U1_39/CO (ADDFXL)       0.53 &    26.49 f
+  add_0_root_add_0_root_add_194_9/U1_40/CO (ADDFXL)       0.49 &    26.99 f
+  add_0_root_add_0_root_add_194_9/U1_41/CO (ADDFXL)       0.60 &    27.59 f
+  add_0_root_add_0_root_add_194_9/U1_42/CO (ADDFXL)       0.52 &    28.11 f
+  add_0_root_add_0_root_add_194_9/U1_43/CO (ADDFXL)       0.51 &    28.62 f
+  add_0_root_add_0_root_add_194_9/U1_44/CO (ADDFXL)       0.46 &    29.08 f
+  add_0_root_add_0_root_add_194_9/U1_45/CO (ADDFXL)       0.51 &    29.59 f
+  add_0_root_add_0_root_add_194_9/U1_46/CO (ADDFXL)       0.48 &    30.07 f
+  add_0_root_add_0_root_add_194_9/U1_47/CO (ADDFXL)       0.54 &    30.61 f
+  add_0_root_add_0_root_add_194_9/U1_48/CO (ADDFXL)       0.48 &    31.09 f
+  add_0_root_add_0_root_add_194_9/U1_49/CO (ADDFXL)       0.49 &    31.57 f
+  add_0_root_add_0_root_add_194_9/U1_50/CO (ADDFXL)       0.45 &    32.02 f
+  add_0_root_add_0_root_add_194_9/U1_51/CO (ADDFXL)       0.44 &    32.46 f
+  add_0_root_add_0_root_add_194_9/U1_52/CO (ADDFXL)       0.42 &    32.89 f
+  add_0_root_add_0_root_add_194_9/U1_53/CO (ADDFXL)       0.44 &    33.33 f
+  add_0_root_add_0_root_add_194_9/U1_54/CO (ADDFXL)       0.43 &    33.75 f
+  add_0_root_add_0_root_add_194_9/U1_55/CO (ADDFXL)       0.44 &    34.19 f
+  add_0_root_add_0_root_add_194_9/U1_56/CO (ADDFXL)       0.44 &    34.63 f
+  add_0_root_add_0_root_add_194_9/U1_57/CO (ADDFXL)       0.47 &    35.10 f
+  add_0_root_add_0_root_add_194_9/U1_58/CO (ADDFXL)       0.43 &    35.53 f
+  add_0_root_add_0_root_add_194_9/U1_59/CO (ADDFXL)       0.42 &    35.95 f
+  add_0_root_add_0_root_add_194_9/U1_60/CO (ADDFXL)       0.40 &    36.35 f
+  add_0_root_add_0_root_add_194_9/U1_61/CO (ADDFXL)       0.41 &    36.76 f
+  add_0_root_add_0_root_add_194_9/U1_62/CO (ADDFXL)       0.44 &    37.20 f
+  add_0_root_add_0_root_add_194_9/U1_63/Y (XOR3X2)        0.50 &    37.70 f
+  add_0_root_add_0_root_add_194_9/SUM[63] (GSIM_DW01_add_496)
+                                                          0.00      37.70 f
+  div_194/a[63] (GSIM_DW_div_tc_0)                        0.00      37.70 f
+  div_194/U222/Y (CLKBUFX3)                               0.94 @    38.64 f
+  div_194/u_div/u_absval_AAbs/A[63] (GSIM_DW01_absval_0)
+                                                          0.00      38.64 f
+  div_194/u_div/u_absval_AAbs/NEG/A[63] (GSIM_DW01_inc_2)
+                                                          0.00      38.64 f
+  div_194/u_div/u_absval_AAbs/NEG/U142/Y (INVXL)          0.37 @    39.00 r
+  div_194/u_div/u_absval_AAbs/NEG/U70/Y (XOR2X1)          0.16 &    39.16 r
+  div_194/u_div/u_absval_AAbs/NEG/SUM[63] (GSIM_DW01_inc_2)
+                                                          0.00      39.16 r
+  div_194/u_div/u_absval_AAbs/U74/Y (AND2X1)              0.22 &    39.38 r
+  div_194/u_div/u_absval_AAbs/ABSVAL[63] (GSIM_DW01_absval_0)
+                                                          0.00      39.38 r
+  div_194/U160/Y (NOR2BX1)                                0.45 &    39.82 r
+  div_194/u_div/u_mx_PartRem_1_59_1/Y (MX2X1)             0.47 &    40.29 r
+  div_194/U162/Y (OR2XL)                                  0.18 &    40.47 r
+  div_194/U15/CO (ADDHXL)                                 0.17 &    40.64 r
+  div_194/U14/Y (OR2X1)                                   0.34 &    40.98 r
+  div_194/U227/Y (MXI2X1)                                 0.31 &    41.30 f
+  div_194/U147/Y (OR2X1)                                  0.28 &    41.58 f
+  div_194/U146/CO (ADDHXL)                                0.16 &    41.74 f
+  div_194/U317/Y (OR2X1)                                  0.37 &    42.10 f
+  div_194/U228/Y (MXI2X1)                                 0.24 &    42.34 f
+  div_194/U145/Y (OR2X1)                                  0.30 &    42.64 f
+  div_194/U144/CO (ADDHXL)                                0.16 &    42.81 f
+  div_194/U18/Y (OR2X1)                                   0.39 &    43.20 f
+  div_194/U17/Y (MXI2X1)                                  0.26 &    43.45 f
+  div_194/U143/Y (OR2X1)                                  0.29 &    43.74 f
+  div_194/U142/CO (ADDHXL)                                0.16 &    43.90 f
+  div_194/U159/Y (OR2X1)                                  0.38 &    44.27 f
+  div_194/U291/Y (MXI2X1)                                 0.24 &    44.52 f
+  div_194/U141/Y (OR2X1)                                  0.28 &    44.80 f
+  div_194/U140/CO (ADDHXL)                                0.16 &    44.95 f
+  div_194/U321/Y (OR2X1)                                  0.38 &    45.33 f
+  div_194/U231/Y (MXI2X1)                                 0.25 &    45.58 f
+  div_194/U139/Y (OR2X1)                                  0.29 &    45.87 f
+  div_194/U138/CO (ADDHXL)                                0.15 &    46.02 f
+  div_194/U21/Y (OR2X1)                                   0.40 &    46.42 f
+  div_194/U20/Y (MXI2X1)                                  0.26 &    46.69 f
+  div_194/U326/Y (OR2X1)                                  0.29 &    46.98 f
+  div_194/U137/CO (ADDHXL)                                0.16 &    47.14 f
+  div_194/U324/Y (OR2X1)                                  0.38 &    47.51 f
+  div_194/U233/Y (MXI2X1)                                 0.26 &    47.77 f
+  div_194/U136/Y (OR2X1)                                  0.29 &    48.06 f
+  div_194/U135/CO (ADDHXL)                                0.16 &    48.22 f
+  div_194/U327/Y (OR2X1)                                  0.38 &    48.60 f
+  div_194/U235/Y (MXI2X1)                                 0.25 &    48.85 f
+  div_194/U134/Y (OR2X1)                                  0.28 &    49.13 f
+  div_194/U133/CO (ADDHXL)                                0.15 &    49.28 f
+  div_194/U158/Y (OR2X1)                                  0.40 &    49.68 f
+  div_194/U293/Y (MXI2X1)                                 0.30 &    49.97 r
+  div_194/U130/Y (OR2X1)                                  0.20 &    50.17 r
+  div_194/U129/CO (ADDHXL)                                0.17 &    50.34 r
+  div_194/U24/Y (OR2X1)                                   0.43 &    50.77 r
+  div_194/U23/Y (MXI2X1)                                  0.37 &    51.14 f
+  div_194/U132/Y (OR2X1)                                  0.30 &    51.45 f
+  div_194/U131/CO (ADDHXL)                                0.16 &    51.61 f
+  div_194/U27/Y (OR2X1)                                   0.41 &    52.02 f
+  div_194/U26/Y (MXI2X1)                                  0.29 &    52.31 f
+  div_194/U334/Y (OR2X1)                                  0.30 &    52.60 f
+  div_194/U128/CO (ADDHXL)                                0.16 &    52.76 f
+  div_194/U332/Y (OR2X1)                                  0.40 &    53.16 f
+  div_194/U238/Y (MXI2X1)                                 0.33 &    53.49 r
+  div_194/U127/Y (OR2X1)                                  0.21 &    53.70 r
+  div_194/U126/CO (ADDHXL)                                0.16 &    53.86 r
+  div_194/U335/Y (OR2X1)                                  0.42 &    54.28 r
+  div_194/U240/Y (MXI2X1)                                 0.37 &    54.65 f
+  div_194/U125/Y (OR2X1)                                  0.30 &    54.95 f
+  div_194/U124/CO (ADDHXL)                                0.15 &    55.10 f
+  div_194/U157/Y (OR2X1)                                  0.42 &    55.52 f
+  div_194/U295/Y (MXI2X1)                                 0.28 &    55.80 f
+  div_194/U123/Y (OR2X1)                                  0.29 &    56.09 f
+  div_194/U122/CO (ADDHXL)                                0.16 &    56.25 f
+  div_194/U338/Y (OR2X1)                                  0.40 &    56.65 f
+  div_194/U242/Y (MXI2X1)                                 0.31 &    56.96 f
+  div_194/U121/Y (OR2X1)                                  0.31 &    57.27 f
+  div_194/U120/CO (ADDHXL)                                0.16 &    57.43 f
+  div_194/U340/Y (OR2X1)                                  0.39 &    57.82 f
+  div_194/U53/Y (MXI2X1)                                  0.26 &    58.08 f
+  div_194/U344/Y (OR2X1)                                  0.30 &    58.38 f
+  div_194/U119/CO (ADDHXL)                                0.16 &    58.54 f
+  div_194/U342/Y (OR2X1)                                  0.37 &    58.91 f
+  div_194/U244/Y (MXI2X1)                                 0.34 &    59.25 r
+  div_194/U118/Y (OR2X1)                                  0.20 &    59.45 r
+  div_194/U117/CO (ADDHXL)                                0.16 &    59.62 r
+  div_194/U345/Y (OR2X1)                                  0.41 &    60.03 r
+  div_194/U246/Y (MXI2X1)                                 0.37 &    60.40 f
+  div_194/U116/Y (OR2X1)                                  0.30 &    60.70 f
+  div_194/U115/CO (ADDHXL)                                0.16 &    60.86 f
+  div_194/U156/Y (OR2X1)                                  0.39 &    61.25 f
+  div_194/U297/Y (MXI2X1)                                 0.30 &    61.54 f
+  div_194/U114/Y (OR2X1)                                  0.30 &    61.84 f
+  div_194/U29/CO (ADDHXL)                                 0.15 &    61.99 f
+  div_194/U28/Y (OR2X1)                                   0.39 &    62.38 f
+  div_194/U248/Y (MXI2X1)                                 0.27 &    62.65 f
+  div_194/U113/Y (OR2X1)                                  0.29 &    62.94 f
+  div_194/U112/CO (ADDHXL)                                0.16 &    63.10 f
+  div_194/U32/Y (OR2X1)                                   0.41 &    63.51 f
+  div_194/U31/Y (MXI2X1)                                  0.27 &    63.78 f
+  div_194/U352/Y (OR2X1)                                  0.29 &    64.07 f
+  div_194/U111/CO (ADDHXL)                                0.16 &    64.23 f
+  div_194/U350/Y (OR2X1)                                  0.39 &    64.62 f
+  div_194/U250/Y (MXI2X1)                                 0.26 &    64.88 f
+  div_194/U110/Y (OR2X1)                                  0.29 &    65.17 f
+  div_194/U109/CO (ADDHXL)                                0.16 &    65.33 f
+  div_194/U353/Y (OR2X1)                                  0.39 &    65.71 f
+  div_194/U252/Y (MXI2X1)                                 0.27 &    65.99 f
+  div_194/U108/Y (OR2X1)                                  0.30 &    66.29 f
+  div_194/U107/CO (ADDHXL)                                0.15 &    66.44 f
+  div_194/U155/Y (OR2X1)                                  0.40 &    66.84 f
+  div_194/U299/Y (MXI2X1)                                 0.26 &    67.10 f
+  div_194/U106/Y (OR2X1)                                  0.29 &    67.39 f
+  div_194/U105/CO (ADDHXL)                                0.16 &    67.54 f
+  div_194/U356/Y (OR2X1)                                  0.38 &    67.93 f
+  div_194/U254/Y (MXI2X1)                                 0.27 &    68.19 f
+  div_194/U104/Y (OR2X1)                                  0.29 &    68.48 f
+  div_194/U103/CO (ADDHXL)                                0.16 &    68.64 f
+  div_194/U358/Y (OR2X1)                                  0.38 &    69.02 f
+  div_194/U52/Y (MXI2X1)                                  0.25 &    69.28 f
+  div_194/U362/Y (OR2X1)                                  0.28 &    69.56 f
+  div_194/U100/CO (ADDHXL)                                0.16 &    69.72 f
+  div_194/U360/Y (OR2X1)                                  0.39 &    70.11 f
+  div_194/U256/Y (MXI2X1)                                 0.28 &    70.39 f
+  div_194/U102/Y (OR2X1)                                  0.29 &    70.68 f
+  div_194/U101/CO (ADDHXL)                                0.15 &    70.83 f
+  div_194/U363/Y (OR2X1)                                  0.40 &    71.23 f
+  div_194/U258/Y (MXI2X1)                                 0.27 &    71.49 f
+  div_194/U99/Y (OR2X1)                                   0.29 &    71.78 f
+  div_194/U98/CO (ADDHXL)                                 0.16 &    71.94 f
+  div_194/U154/Y (OR2X1)                                  0.39 &    72.33 f
+  div_194/U301/Y (MXI2X1)                                 0.26 &    72.60 f
+  div_194/U97/Y (OR2X1)                                   0.29 &    72.89 f
+  div_194/U34/CO (ADDHXL)                                 0.16 &    73.05 f
+  div_194/U33/Y (OR2X1)                                   0.38 &    73.43 f
+  div_194/U260/Y (MXI2X1)                                 0.27 &    73.70 f
+  div_194/U96/Y (OR2X1)                                   0.29 &    73.99 f
+  div_194/U95/CO (ADDHXL)                                 0.16 &    74.15 f
+  div_194/U37/Y (OR2X1)                                   0.40 &    74.55 f
+  div_194/U36/Y (MXI2X1)                                  0.28 &    74.83 f
+  div_194/U370/Y (OR2X1)                                  0.29 &    75.13 f
+  div_194/U94/CO (ADDHXL)                                 0.16 &    75.29 f
+  div_194/U368/Y (OR2X1)                                  0.41 &    75.70 f
+  div_194/U262/Y (MXI2X1)                                 0.28 &    75.98 f
+  div_194/U93/Y (OR2X1)                                   0.29 &    76.28 f
+  div_194/U92/CO (ADDHXL)                                 0.16 &    76.44 f
+  div_194/U371/Y (OR2X1)                                  0.41 &    76.84 f
+  div_194/U264/Y (MXI2X1)                                 0.29 &    77.13 f
+  div_194/U91/Y (OR2X1)                                   0.29 &    77.42 f
+  div_194/U90/CO (ADDHXL)                                 0.16 &    77.58 f
+  div_194/U153/Y (OR2X1)                                  0.41 &    77.99 f
+  div_194/U303/Y (MXI2X1)                                 0.28 &    78.26 f
+  div_194/U89/Y (OR2X1)                                   0.29 &    78.56 f
+  div_194/U88/CO (ADDHXL)                                 0.16 &    78.72 f
+  div_194/U374/Y (OR2X1)                                  0.40 &    79.11 f
+  div_194/U266/Y (MXI2X1)                                 0.29 &    79.40 f
+  div_194/U70/Y (OR2X1)                                   0.29 &    79.70 f
+  div_194/U69/CO (ADDHXL)                                 0.16 &    79.85 f
+  div_194/U376/Y (OR2X1)                                  0.39 &    80.24 f
+  div_194/U51/Y (MXI2X1)                                  0.27 &    80.52 f
+  div_194/U380/Y (OR2X1)                                  0.29 &    80.81 f
+  div_194/U71/CO (ADDHXL)                                 0.16 &    80.96 f
+  div_194/U378/Y (OR2X1)                                  0.38 &    81.34 f
+  div_194/U268/Y (MXI2X1)                                 0.28 &    81.62 f
+  div_194/U73/Y (OR2X1)                                   0.30 &    81.92 f
+  div_194/U72/CO (ADDHXL)                                 0.15 &    82.07 f
+  div_194/U381/Y (OR2X1)                                  0.38 &    82.46 f
+  div_194/U270/Y (MXI2X1)                                 0.25 &    82.71 f
+  div_194/U75/Y (OR2X1)                                   0.29 &    83.00 f
+  div_194/U74/CO (ADDHXL)                                 0.16 &    83.16 f
+  div_194/U150/Y (OR2X1)                                  0.40 &    83.56 f
+  div_194/U305/Y (MXI2X1)                                 0.28 &    83.84 f
+  div_194/U68/Y (OR2X1)                                   0.30 &    84.14 f
+  div_194/U67/CO (ADDHXL)                                 0.16 &    84.30 f
+  div_194/U40/Y (OR2X1)                                   0.40 &    84.70 f
+  div_194/U39/Y (MXI2X1)                                  0.27 &    84.97 f
+  div_194/U66/Y (OR2X1)                                   0.29 &    85.26 f
+  div_194/U42/CO (ADDHXL)                                 0.16 &    85.42 f
+  div_194/U41/Y (OR2X1)                                   0.39 &    85.81 f
+  div_194/U50/Y (MXI2X1)                                  0.28 &    86.10 f
+  div_194/U388/Y (OR2X1)                                  0.30 &    86.39 f
+  div_194/U65/CO (ADDHXL)                                 0.16 &    86.55 f
+  div_194/U386/Y (OR2X1)                                  0.38 &    86.93 f
+  div_194/U273/Y (MXI2X1)                                 0.25 &    87.18 f
+  div_194/U64/Y (OR2X1)                                   0.28 &    87.46 f
+  div_194/U63/CO (ADDHXL)                                 0.15 &    87.61 f
+  div_194/U389/Y (OR2X1)                                  0.37 &    87.99 f
+  div_194/U275/Y (MXI2X1)                                 0.27 &    88.26 f
+  div_194/U62/Y (OR2X1)                                   0.29 &    88.55 f
+  div_194/U61/CO (ADDHXL)                                 0.16 &    88.71 f
+  div_194/U149/Y (OR2X1)                                  0.37 &    89.08 f
+  div_194/U307/Y (MXI2X1)                                 0.25 &    89.34 f
+  div_194/U58/Y (OR2X1)                                   0.28 &    89.62 f
+  div_194/U57/CO (ADDHXL)                                 0.16 &    89.78 f
+  div_194/U392/Y (OR2X1)                                  0.38 &    90.16 f
+  div_194/U277/Y (MXI2X1)                                 0.27 &    90.43 f
+  div_194/U60/Y (OR2X1)                                   0.29 &    90.73 f
+  div_194/U59/CO (ADDHXL)                                 0.15 &    90.88 f
+  div_194/U394/Y (OR2X1)                                  0.38 &    91.26 f
+  div_194/U49/Y (MXI2X1)                                  0.25 &    91.51 f
+  div_194/U398/Y (OR2X1)                                  0.28 &    91.80 f
+  div_194/U54/CO (ADDHXL)                                 0.16 &    91.95 f
+  div_194/U396/Y (OR2X1)                                  0.38 &    92.33 f
+  div_194/U279/Y (MXI2X1)                                 0.27 &    92.60 f
+  div_194/U56/Y (OR2X1)                                   0.29 &    92.90 f
+  div_194/U55/CO (ADDHXL)                                 0.16 &    93.06 f
+  div_194/U399/Y (OR2X1)                                  0.38 &    93.43 f
+  div_194/U281/Y (MXI2X1)                                 0.26 &    93.70 f
+  div_194/U79/Y (OR2X1)                                   0.29 &    93.99 f
+  div_194/U78/CO (ADDHXL)                                 0.15 &    94.14 f
+  div_194/U1/Y (OR2X1)                                    0.37 &    94.51 f
+  div_194/U309/Y (MXI2X1)                                 0.25 &    94.76 f
+  div_194/U83/Y (OR2X1)                                   0.28 &    95.04 f
+  div_194/U82/CO (ADDHXL)                                 0.16 &    95.20 f
+  div_194/U45/Y (OR2X1)                                   0.40 &    95.61 f
+  div_194/U44/Y (MXI2X1)                                  0.27 &    95.87 f
+  div_194/U85/Y (OR2X1)                                   0.29 &    96.17 f
+  div_194/U84/CO (ADDHXL)                                 0.16 &    96.33 f
+  div_194/U48/Y (OR2X1)                                   0.39 &    96.72 f
+  div_194/U47/Y (MXI2X1)                                  0.27 &    96.98 f
+  div_194/U405/Y (OR2X1)                                  0.29 &    97.27 f
+  div_194/U81/CO (ADDHXL)                                 0.16 &    97.43 f
+  div_194/U3/Y (OR2X1)                                    0.41 &    97.84 f
+  div_194/U2/Y (MXI2X1)                                   0.27 &    98.10 f
+  div_194/U77/Y (OR2X1)                                   0.28 &    98.39 f
+  div_194/U5/CO (ADDHXL)                                  0.16 &    98.54 f
+  div_194/U4/Y (OR2X1)                                    0.38 &    98.92 f
+  div_194/U285/Y (MXI2X1)                                 0.25 &    99.17 f
+  div_194/U86/Y (OR2X1)                                   0.29 &    99.46 f
+  div_194/U7/CO (ADDHXL)                                  0.16 &    99.62 f
+  div_194/U6/Y (OR2X1)                                    0.37 &   100.00 f
+  div_194/U311/Y (MXI2X1)                                 0.25 &   100.24 f
+  div_194/U87/Y (OR2X1)                                   0.28 &   100.52 f
+  div_194/U9/CO (ADDHXL)                                  0.16 &   100.68 f
+  div_194/U8/Y (OR2X1)                                    0.37 &   101.05 f
+  div_194/U287/Y (MXI2X1)                                 0.24 &   101.29 f
+  div_194/U80/Y (OR2X1)                                   0.28 &   101.57 f
+  div_194/U11/CO (ADDHXL)                                 0.15 &   101.72 f
+  div_194/U10/Y (OR2X1)                                   0.38 &   102.10 f
+  div_194/U76/Y (MXI2X1)                                  0.24 &   102.34 f
+  div_194/U411/Y (OR2X1)                                  0.28 &   102.63 f
+  div_194/U13/CO (ADDHXL)                                 0.16 &   102.78 f
+  div_194/U12/Y (OR2X1)                                   0.38 &   103.16 f
+  div_194/U289/Y (MXI2X1)                                 0.25 &   103.41 f
+  div_194/U152/Y (OR2X1)                                  0.28 &   103.69 f
+  div_194/U151/CO (ADDHXL)                                0.15 &   103.85 f
+  div_194/U412/Y (OR2X1)                                  0.36 &   104.21 f
+  div_194/u_div/u_mx_PartRem_1_1_2/Y (CLKMX2X2)           0.20 &   104.41 f
+  div_194/U414/Y (NAND2BX1)                               0.16 &   104.56 f
+  div_194/U161/Y (AO21X1)                                 0.29 &   104.86 f
+  div_194/U420/Y (XOR2X1)                                 0.12 &   104.98 r
+  div_194/u_div/u_inc_QInc/a[0] (GSIM_DW_inc_0)           0.00     104.98 r
+  div_194/u_div/u_inc_QInc/U66/CO (ADDHXL)                0.21 &   105.19 r
+  div_194/u_div/u_inc_QInc/U71/CO (ADDHXL)                0.20 &   105.39 r
+  div_194/u_div/u_inc_QInc/U70/CO (ADDHXL)                0.21 &   105.60 r
+  div_194/u_div/u_inc_QInc/U81/CO (ADDHXL)                0.21 &   105.80 r
+  div_194/u_div/u_inc_QInc/U62/CO (ADDHXL)                0.24 &   106.04 r
+  div_194/u_div/u_inc_QInc/U79/CO (ADDHXL)                0.21 &   106.25 r
+  div_194/u_div/u_inc_QInc/U60/CO (ADDHXL)                0.21 &   106.46 r
+  div_194/u_div/u_inc_QInc/U82/CO (ADDHXL)                0.22 &   106.68 r
+  div_194/u_div/u_inc_QInc/U109/CO (ADDHXL)               0.29 &   106.97 r
+  div_194/u_div/u_inc_QInc/U80/CO (ADDHXL)                0.25 &   107.22 r
+  div_194/u_div/u_inc_QInc/U56/CO (ADDHXL)                0.24 &   107.45 r
+  div_194/u_div/u_inc_QInc/U72/CO (ADDHXL)                0.31 &   107.77 r
+  div_194/u_div/u_inc_QInc/U54/CO (ADDHXL)                0.24 &   108.01 r
+  div_194/u_div/u_inc_QInc/U73/CO (ADDHXL)                0.29 &   108.30 r
+  div_194/u_div/u_inc_QInc/U52/CO (ADDHXL)                0.30 &   108.60 r
+  div_194/u_div/u_inc_QInc/U74/CO (ADDHXL)                0.30 &   108.90 r
+  div_194/u_div/u_inc_QInc/U50/CO (ADDHXL)                0.25 &   109.16 r
+  div_194/u_div/u_inc_QInc/U75/CO (ADDHXL)                0.31 &   109.47 r
+  div_194/u_div/u_inc_QInc/U110/CO (ADDHXL)               0.24 &   109.71 r
+  div_194/u_div/u_inc_QInc/U76/CO (ADDHXL)                0.26 &   109.97 r
+  div_194/u_div/u_inc_QInc/U46/CO (ADDHXL)                0.28 &   110.25 r
+  div_194/u_div/u_inc_QInc/U78/CO (ADDHXL)                0.30 &   110.55 r
+  div_194/u_div/u_inc_QInc/U44/CO (ADDHXL)                0.23 &   110.78 r
+  div_194/u_div/u_inc_QInc/U77/CO (ADDHXL)                0.30 &   111.08 r
+  div_194/u_div/u_inc_QInc/U99/CO (ADDHXL)                0.27 &   111.35 r
+  div_194/u_div/u_inc_QInc/U41/CO (ADDHXL)                0.41 &   111.76 r
+  div_194/u_div/u_inc_QInc/U83/CO (ADDHXL)                0.32 &   112.08 r
+  div_194/u_div/u_inc_QInc/U101/CO (ADDHXL)               0.30 &   112.38 r
+  div_194/u_div/u_inc_QInc/U107/CO (ADDHXL)               0.25 &   112.63 r
+  div_194/u_div/u_inc_QInc/U84/CO (ADDHXL)                0.24 &   112.87 r
+  div_194/u_div/u_inc_QInc/U103/CO (ADDHXL)               0.30 &   113.17 r
+  div_194/u_div/u_inc_QInc/U35/CO (ADDHXL)                0.26 &   113.43 r
+  div_194/u_div/u_inc_QInc/U85/CO (ADDHXL)                0.29 &   113.72 r
+  div_194/u_div/u_inc_QInc/U33/CO (ADDHXL)                0.28 &   114.00 r
+  div_194/u_div/u_inc_QInc/U86/CO (ADDHXL)                0.26 &   114.26 r
+  div_194/u_div/u_inc_QInc/U98/CO (ADDHXL)                0.26 &   114.52 r
+  div_194/u_div/u_inc_QInc/U30/CO (ADDHXL)                0.28 &   114.80 r
+  div_194/u_div/u_inc_QInc/U87/CO (ADDHXL)                0.27 &   115.07 r
+  div_194/u_div/u_inc_QInc/U108/CO (ADDHXL)               0.27 &   115.34 r
+  div_194/u_div/u_inc_QInc/U88/CO (ADDHXL)                0.36 &   115.70 r
+  div_194/u_div/u_inc_QInc/U104/CO (ADDHXL)               0.49 &   116.19 r
+  div_194/u_div/u_inc_QInc/U25/CO (ADDHXL)                0.36 &   116.55 r
+  div_194/u_div/u_inc_QInc/U89/CO (ADDHXL)                0.27 &   116.81 r
+  div_194/u_div/u_inc_QInc/U100/CO (ADDHXL)               0.30 &   117.12 r
+  div_194/u_div/u_inc_QInc/U22/CO (ADDHXL)                0.26 &   117.38 r
+  div_194/u_div/u_inc_QInc/U90/CO (ADDHXL)                0.27 &   117.65 r
+  div_194/u_div/u_inc_QInc/U102/CO (ADDHXL)               0.53 &   118.18 r
+  div_194/u_div/u_inc_QInc/U19/CO (ADDHXL)                0.31 &   118.48 r
+  div_194/u_div/u_inc_QInc/U91/CO (ADDHXL)                0.25 &   118.73 r
+  div_194/u_div/u_inc_QInc/U111/CO (ADDHXL)               0.28 &   119.01 r
+  div_194/u_div/u_inc_QInc/U92/CO (ADDHXL)                0.26 &   119.27 r
+  div_194/u_div/u_inc_QInc/U15/CO (ADDHXL)                0.22 &   119.49 r
+  div_194/u_div/u_inc_QInc/U93/CO (ADDHXL)                0.24 &   119.73 r
+  div_194/u_div/u_inc_QInc/U94/CO (ADDHXL)                0.23 &   119.96 r
+  div_194/u_div/u_inc_QInc/U12/CO (ADDHXL)                0.23 &   120.19 r
+  div_194/u_div/u_inc_QInc/U95/CO (ADDHXL)                0.27 &   120.46 r
+  div_194/u_div/u_inc_QInc/U96/CO (ADDHXL)                0.24 &   120.70 r
+  div_194/u_div/u_inc_QInc/U9/CO (ADDHXL)                 0.21 &   120.92 r
+  div_194/u_div/u_inc_QInc/U97/CO (ADDHXL)                0.21 &   121.12 r
+  div_194/u_div/u_inc_QInc/U7/CO (ADDHXL)                 0.28 &   121.41 r
+  div_194/u_div/u_inc_QInc/U106/Y (XOR2XL)                0.28 &   121.69 f
+  div_194/u_div/u_inc_QInc/sum[60] (GSIM_DW_inc_0)        0.00     121.69 f
+  div_194/quotient[60] (GSIM_DW_div_tc_0)                 0.00     121.69 f
+  U10991/Y (AOI222X1)                                     0.51 &   122.20 r
+  U10990/Y (NAND2X1)                                      0.64 &   122.84 f
+  U13503/Y (OAI22XL)                                      0.59 &   123.43 r
+  U8677/Y (OAI222XL)                                      0.35 &   123.78 f
+  U8031/Y (AOI221XL)                                      0.30 &   124.08 r
+  U13523/Y (AND4X1)                                       0.88 &   124.97 r
+  U12069/Y (OAI222XL)                                     0.36 &   125.32 f
+  xArray_reg[12][60]/D (DFFQXL)                           0.00 &   125.32 f
+  data arrival time                                                125.32
+
+  clock clk (rise edge)                                 126.00     126.00
+  clock network delay (propagated)                        0.36     126.36
+  clock uncertainty                                      -0.10     126.26
+  xArray_reg[12][60]/CK (DFFQXL)                          0.00     126.26 r
+  library setup time                                     -0.23     126.03
+  data required time                                               126.03
+  --------------------------------------------------------------------------
+  data required time                                               126.03
+  data arrival time                                               -125.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.70
+
+
+1

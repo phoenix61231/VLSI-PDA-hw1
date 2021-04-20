@@ -1,0 +1,21 @@
+
+Name of design : GSIM
+Number of cell instance masters in the library : 132
+Number of cell instances in the design : 23338
+Target IR drop : 150.000 mV
+Processing net VDD ...
+Average power dissipation in GSIM :   100.00 mW
+Power supply voltage :     1.50 V
+Average current in GSIM :    66.67 mA
+Number of power pad nodes reaching to the power ports of the leaf cells or blocks : 4
+Maximum IR drop in GSIM : 45.39 mV
+Maximum current in GSIM : 17.096 mA
+Processing net VSS ...
+Average power dissipation in GSIM :   100.00 mW
+Power supply voltage :     1.50 V
+Average current in GSIM :    66.67 mA
+Number of power pad nodes reaching to the power ports of the leaf cells or blocks : 4
+Maximum IR drop in GSIM : 48.27 mV
+Maximum current in GSIM : 17.427 mA
+Memory usage for design data :      47783.936 Kbytes
+Overall takes     0.25 seconds
